@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails',                    '4.1.7'
 gem 'rails-api',                '~> 0.3.0'  # lightweight rails app built for apis
-gem 'sqlite3',                  '~> 1.3.9'  # for access to the sqlite database
+# gem 'sqlite3',                  '~> 1.3.9'  # for access to the sqlite database
+gem 'pg',                       '~> 0.17.1' # for access to the postgres database
+gem 'rails_config',             '~> 0.4.2'  # for multi-environment yaml settings
 gem 'rack-timeout',             '~> 0.1.0'  # for aborting requests that are taking too long
 gem 'jbuilder',                 '~> 2.2.3'  # for creating json structure
 gem 'oj',                       '~> 2.10.3' # for parsing incoming json requests

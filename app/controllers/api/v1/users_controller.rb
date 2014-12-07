@@ -10,7 +10,7 @@ class Api::V1::UsersController < ApiController
   end
 
   def create
-    @user = User.last
+    @user = User.last   # uncertain of this line
 
     if @user.save
       render
@@ -24,5 +24,26 @@ class Api::V1::UsersController < ApiController
 
   def show
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.last   # uncertain of this line
+
+    if @user.update(user_params)
+      render
+    else
+      render json: {
+        message: 'Validation Failed',
+        errors: @user.errors.full_messages
+      }, status: 422
+    end
+  end
+
+  private
+
+  def user_params
+    {
+      created_at: params[:created_at]
+    }
   end
 end

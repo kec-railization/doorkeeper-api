@@ -2,7 +2,7 @@ describe 'GET /v1/users/:id' do
   it 'returns a user by :id' do
     user = create(:user)
 
-    get "/v1/users/#{user.id}", {}.to_json
+    get "/v1/users/#{user.id}", {}
 
     expect(response_json).to eq(
       {
@@ -21,7 +21,7 @@ describe 'GET /v1/users' do
     user_1 = create(:user)
     user_2 = create(:user)
 
-    get '/v1/users', {}.to_json
+    get '/v1/users', {}
 
     expect(response_json.first.last).to eq([
       {
@@ -44,7 +44,7 @@ describe 'POST /v1/users' do
   it 'saves a user' do
     user = create(:user)
 
-    post '/v1/users', {}.to_json
+    post '/v1/users', {}
 
     user = User.last
     expect(response_json).to eq(
@@ -52,5 +52,20 @@ describe 'POST /v1/users' do
         'id'            => user.id
        }
     )
+  end
+end
+
+describe 'PATCH /v1/users/:id' do
+  it "updates the user's creation date" do
+    user = create(:user)
+    new_created_at = Time.zone.now - 86400  # one day ago
+
+    patch "/v1/users/#{user.id}", {
+      created_at: new_created_at
+    }
+
+    user = user.reload
+    expect(user.created_at.to_i).to eq new_created_at.to_i
+    expect(response_json).to eq({ 'id' => user.id })
   end
 end
