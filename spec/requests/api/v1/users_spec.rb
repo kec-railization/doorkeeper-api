@@ -69,3 +69,14 @@ describe 'PATCH /v1/users/:id' do
     expect(response_json).to eq({ 'id' => user.id })
   end
 end
+
+describe 'DELETE /v1/users/:id' do
+  it "deletes a user by :id" do
+    user = create(:user)
+
+    delete "/v1/users/#{user.id}", {}
+
+    expect(User.count).to eq 0
+    expect(response_json).to eq({ 'id' => user.id })
+  end
+end
