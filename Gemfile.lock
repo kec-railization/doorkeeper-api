@@ -42,6 +42,9 @@ GEM
     did_you_mean (0.9.4)
       interception
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -146,6 +149,7 @@ DEPENDENCIES
   binding_of_caller (~> 0.7.2)
   database_cleaner (~> 1.3.0)
   did_you_mean (~> 0.9.4)
+  dotenv-rails (~> 1.0.2)
   factory_girl_rails (~> 4.5.0)
   jbuilder (~> 2.2.3)
   oj (~> 2.10.3)

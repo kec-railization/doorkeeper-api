@@ -25,6 +25,7 @@ group :development, :test do
   gem 'binding_of_caller',      '~> 0.7.2'  # optional helper for better_errors
   gem 'database_cleaner',       '~> 1.3.0'  # for cleaning databases
   gem 'did_you_mean',           '~> 0.9.4'  # for catching human blunders
+  gem 'dotenv-rails',           '~> 1.0.2'  # for loading environment variables
 end
 
 group :test do
