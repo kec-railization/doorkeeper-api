@@ -1,28 +1,19 @@
 source 'https://rubygems.org'
 
+gem 'rails',                    '4.1.7'
+gem 'rails-api',                '~> 0.3.0'  # lightweight rails app built for apis
+gem 'sqlite3',                  '~> 1.3.9'  # for access to the sqlite database
 
-gem 'rails', '4.1.7'
+group :development do
+  gem 'spring',                 '~> 1.1.3'  # for fast rails actions via pre-loading
+  gem 'spring-commands-rspec',  '~> 1.0.2'  # for rspec support in spring
+end
 
-gem 'rails-api'
+group :development, :test do
+end
 
-gem 'spring', :group => :development
+group :test do
+end
 
-
-gem 'sqlite3'
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', :group => :development
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :staging do
+end
