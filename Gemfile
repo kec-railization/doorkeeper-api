@@ -14,6 +14,8 @@ group :development do
   gem 'spring',                 '~> 1.1.3'  # for fast rails actions via pre-loading
   gem 'spring-commands-rspec',  '~> 1.0.2'  # for rspec support in spring
   gem 'better_errors',          '~> 2.0.0'  # for better debugging
+  gem 'rails-erd', git: 'https://github.com/paulwittmann/rails-erd', branch: 'mavericks'
+                                            # for generating entity-relationship diagrams
 end
 
 group :development, :test do
@@ -33,4 +35,5 @@ group :test do
 end
 
 group :staging do
+  gem 'rails_12factor',         '~> 0.0.3'  # for serving assets and logging support in heroku
 end
