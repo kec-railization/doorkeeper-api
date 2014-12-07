@@ -10,7 +10,7 @@ My Green Space API
 To install this API on your computer, type the following commands:
 
 ```bash
-$ git clone https://bitbucket.org/mygreenspace/mygreenspace-api.git
+$ git clone https://github.com/skurilyak/mygreenspace-api.git
 $ cd mygreenspace-api
 $ bundle install
 $ rake db:setup
