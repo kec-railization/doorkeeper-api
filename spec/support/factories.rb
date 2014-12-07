@@ -5,7 +5,7 @@ FactoryGirl.define do
 
   sequence(:first_name)     { |n| "first_name #{n}" }
   sequence(:last_name)      { |n| "last_name #{n}" }
-  sequence(:email)          { |n| "test#{n}@example.com" }
+  # sequence(:email)          { |n| "test#{n}@example.com" }
 
   factory :user do
     # device_token { generate(:token) }
