@@ -10,9 +10,15 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rspec-rails',            '~> 3.1.0'  # for unit testing
+  gem 'factory_girl_rails',     '~> 4.5.0'  # for test data
+  gem 'pry-rails',              '~> 0.3.2'  # for interactively exploring objects
+  gem 'awesome_print',          '~> 1.2.0'  # required dependency for pry-rails
+  gem 'pry',                    '~> 0.10.1' # required dependency for pry-rails
 end
 
 group :test do
+  gem 'shoulda-matchers',       '~> 2.7.0', require: false  # for common rspec matchers
 end
 
 group :staging do
