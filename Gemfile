@@ -8,6 +8,7 @@ gem 'rack-timeout',             '~> 0.1.0'  # for aborting requests that are tak
 group :development do
   gem 'spring',                 '~> 1.1.3'  # for fast rails actions via pre-loading
   gem 'spring-commands-rspec',  '~> 1.0.2'  # for rspec support in spring
+  gem 'better_errors',          '~> 2.0.0'  # for better debugging
 end
 
 group :development, :test do
@@ -16,6 +17,7 @@ group :development, :test do
   gem 'pry-rails',              '~> 0.3.2'  # for interactively exploring objects
   gem 'awesome_print',          '~> 1.2.0'  # required dependency for pry-rails
   gem 'pry',                    '~> 0.10.1' # required dependency for pry-rails
+  gem 'binding_of_caller',      '~> 0.7.2'  # optional helper for better_errors
 end
 
 group :test do
