@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',                    '4.1.7'
 gem 'rails-api',                '~> 0.3.0'  # lightweight rails app built for apis
 gem 'sqlite3',                  '~> 1.3.9'  # for access to the sqlite database
+gem 'rack-timeout',             '~> 0.1.0'  # for aborting requests that are taking too long
 
 group :development do
   gem 'spring',                 '~> 1.1.3'  # for fast rails actions via pre-loading
