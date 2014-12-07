@@ -5,6 +5,8 @@ gem 'rails-api',                '~> 0.3.0'  # lightweight rails app built for ap
 gem 'sqlite3',                  '~> 1.3.9'  # for access to the sqlite database
 gem 'rack-timeout',             '~> 0.1.0'  # for aborting requests that are taking too long
 gem 'jbuilder',                 '~> 2.2.3'  # for creating json structure
+gem 'oj',                       '~> 2.10.3' # for parsing incoming json requests
+gem 'unicorn',                  '~> 4.8.3'  # for serving http requests
 
 group :development do
   gem 'spring',                 '~> 1.1.3'  # for fast rails actions via pre-loading

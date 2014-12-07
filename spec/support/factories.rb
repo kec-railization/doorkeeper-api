@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  sequence :token do
-    SecureRandom.hex(3)
-  end
+  # sequence :token do
+  #   SecureRandom.hex(3)
+  # end
 
   sequence(:first_name)     { |n| "first_name #{n}" }
   sequence(:last_name)      { |n| "last_name #{n}" }
@@ -9,8 +9,8 @@ FactoryGirl.define do
 
   factory :user do
     # device_token { generate(:token) }
-    # first_name
-    # last_name
+    first_name
+    last_name
     # email
     # password              "foobar123"
     # password_confirmation "foobar123"
