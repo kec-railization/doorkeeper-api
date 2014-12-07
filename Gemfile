@@ -19,6 +19,7 @@ group :development, :test do
   gem 'awesome_print',          '~> 1.2.0'  # required dependency for pry-rails
   gem 'pry',                    '~> 0.10.1' # required dependency for pry-rails
   gem 'binding_of_caller',      '~> 0.7.2'  # optional helper for better_errors
+  gem 'database_cleaner',       '~> 1.3.0'  # for cleaning databases
 end
 
 group :test do
