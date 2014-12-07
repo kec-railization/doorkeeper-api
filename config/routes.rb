@@ -1,7 +1,7 @@
 MyGreenSpaceAPI::Application.routes.draw do
   scope module: :api, defaults: { format: 'json' } do
     namespace :v1 do
-      # resources will be here
+      resources :users, only: [:index]
     end
   end
 end
