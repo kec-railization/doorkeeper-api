@@ -24,6 +24,7 @@ group :development, :test do
   gem 'pry',                    '~> 0.10.1' # required dependency for pry-rails
   gem 'binding_of_caller',      '~> 0.7.2'  # optional helper for better_errors
   gem 'database_cleaner',       '~> 1.3.0'  # for cleaning databases
+  gem 'did_you_mean',           '~> 0.9.4'  # for catching human blunders
 end
 
 group :test do
