@@ -34,5 +34,5 @@ group :test do
 end
 
 group :staging do
-  gem 'rails_12factor',         '~> 0.0.3'  # for serving assets and logging support in heroku
+  gem 'rails_12factor',         '~> 0.0.3'  # for serving assets and logging support in herokul
 end
